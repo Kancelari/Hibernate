@@ -73,6 +73,12 @@ public class HibernateExample {
 //        projects5.forEach(e->
 //                System.out.println(e.toString()));
 
+        System.out.println("--------- Zgjidh te gjithe punonjesit dhe rradhiti ne rendin alfabetik nga A ne Z---------");
+        Query queryManyToMany6 = session.createQuery("select e from Employee e order by e.firstName asc");
+        List<Employee> projects6 = queryManyToMany6.getResultList();
+        projects6.forEach(e->
+                System.out.println(e.toString()));
+
         session.close();
     }
 }
